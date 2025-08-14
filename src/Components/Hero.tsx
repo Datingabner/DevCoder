@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { FaJava, FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 import { BiLogoPostgresql, BiLogoSpringBoot } from 'react-icons/bi';
+import RainOfStars from './Backgrounds/RainOfStars';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -13,12 +14,12 @@ const Hero = () => {
   };
 
   const technologies = [
-    { name: 'React', icon: FaReact, color: 'text-blue-500' },
-    { name: 'Java', icon: FaJava, color: 'text-red-500' },
-    { name: 'TypeScript', icon: SiTypescript, color: 'text-yellow-500' },
-    { name: 'Node.js', icon: FaNodeJs, color: 'text-lime-600' },
-    { name: 'Spring Boot', icon: BiLogoSpringBoot, color: 'text-lime-600' },
-    { name: 'PostgreSQL', icon: BiLogoPostgresql, color: 'text-sky-800' }
+    { name: 'React', icon: FaReact, iconcolor: 'text-blue-500' , shadowColor: 'hover:shadown-xl hover:shadow-blue-500/60'},
+    { name: 'Java', icon: FaJava, iconcolor: 'text-red-500' , shadowColor: 'hover:shadown-xl hover:shadow-red-500/60'},
+    { name: 'TypeScript', icon: SiTypescript, iconcolor: 'text-yellow-500' , shadowColor: 'hover:shadown-xl hover:shadow-yellow-500/60'},
+    { name: 'Node.js', icon: FaNodeJs, iconcolor: 'text-lime-600' , shadowColor: 'hover:shadown-xl hover:shadow-lime-600/80'},
+    { name: 'Spring Boot', icon: BiLogoSpringBoot, iconcolor: 'text-lime-600' , shadowColor: 'hover:shadown-xl hover:shadow-lime-600/80 '},
+    { name: 'PostgreSQL', icon: BiLogoPostgresql, iconcolor: 'text-sky-800', shadowColor: 'hover:shadown-xl hover:shadow-sky-800/60' }
   ];
 
   const projects = [
@@ -63,13 +64,13 @@ const Hero = () => {
   ];
 
   return (
-    <section id="inicio" className="pt-16 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section id="inicio" className="pt-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       {/* Hero Principal */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
             Transformamos Ideas en
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-br from-blue-900 via-cyan-400 to-indigo-700 ">
               {' '}Soluciones Digitales
             </span>
           </h1>
@@ -78,7 +79,7 @@ const Hero = () => {
           </p>
 
           {/* Propuesta de Valor */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-12 shadow-lg animate-fade-in-delay-2">
+          <div className="bg-cyan-200/50 backdrop-blur-sm rounded-2xl p-8 mb-12 shadow-lg animate-fade-in-delay-2">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">¿Por qué elegir DevCoder?</h2>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto">
               Combinamos experiencia técnica con un enfoque centrado en resultados. Desarrollamos soluciones escalables,
@@ -90,7 +91,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
             <button
               onClick={() => scrollToSection('contacto')}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center"
+              className="bg-gradient-to-r from-blue-700 via-cyan-500 to-indigo-600 hover:bg-gradient-to-bl hover:from-blue-700 hover:via-cyan-500 hover:to-indigo-600 hover:transition-colors hover:duration-300 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center"
             >
               Solicitar Cotización
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -110,8 +111,8 @@ const Hero = () => {
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Nuestro Proceso de Trabajo</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {processSteps.map((step, index) => (
-            <div key={index} className="text-center group">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <div key={index} className="bg-cyan-200/30 backdrop-blur-sm rounded-2xl border-1 border-blue-900 p-6 text-center hover:scale-105 hover:shadow-lg hover:shadow-neutral-700/50 transition-trasnform duration-300 group">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center group-hover:scale-115 group-hover:shadow-lg group-hover:shadow-neutral-400/70 transition-transform duration-300">
                 {step.icon}
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
@@ -144,20 +145,25 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Tecnologías */}
+        {/* Tecnologías */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Tecnologías que Dominamos</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
           {technologies.map((tech, index) => (
-            <div key={index} className="bg-white grid grid-rows-2 grid-cols-1 justify-items-center items-center p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
+            <div key={index} className={`bg-white border-[0.5px] border-blue-900 grid grid-rows-2 grid-cols-1 justify-items-center items-center p-6 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 group ${tech.shadowColor} `}>
               <div className=" w-min text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                <tech.icon className={`h-13 w-auto ${tech.color} `} />
+                <tech.icon className={`h-13 w-auto ${tech.iconcolor} `} />
               </div>
-              <p className="text-sm font-medium text-gray-700">{tech.name}</p>
+              <p className="text-sm font-medium text-gray-800">{tech.name}</p>
             </div>
           ))}
         </div>
       </div>
+      <RainOfStars>
+        <div className='h-100 bg-transparent backdrop-blur-xs flex items-center justify-center'>
+          
+        </div>
+        </RainOfStars>
     </section>
   );
 };

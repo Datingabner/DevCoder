@@ -16,8 +16,13 @@ import Administrativa from './Components/Pages/Web/Administrativa';
 import Personalizadas from './Components/Pages/Web/Personalizadas';
 // Desarrollo de APIs
 import DesarrolloAPIs from './Components/Pages/APIS/DesarrolloServicios';
+import ApiRest from './Components/Pages/APIS/Rest';
+import Externas from './Components/Pages/APIS/Externas';
+import JavaAPISoap from './Components/Pages/APIS/Soap';
+import Microservicios from './Components/Pages/APIS/Microservicios';
 // Servicios Adicionales
 import ServiciosAdicionales from './Components/Pages/Adicionales/ServiciosAdicionales';
+import Mantenimiento from './Components/Pages/Adicionales/Mantenimiento';
 //import ScrollToTop from './Components/Utils/ScrollToTop';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -57,14 +62,23 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path='/Servicios' element={<Services />} />
+          {/* Desarrollo Web */}
           <Route path='/Servicios/Web' element={<DesarrolloWeb />} />
           <Route path='/Servicios/Web/sitios-informativos' element={<Paginas />} />
           <Route path='/Servicios/Web/sitios-catalogo' element={<Catalogo />} />
           <Route path='/Servicios/Web/ecommerce' element={<ECommerce />} />
           <Route path='/Servicios/Web/apps-administrativas' element={<Administrativa />} />
           <Route path='/Servicios/Web/apps-personalizadas' element={<Personalizadas />} />
+          {/* Desarrollo de APIs */}
           <Route path='/Servicios/Apis' element={<DesarrolloAPIs />} />
+          <Route path='/Servicios/Apis/java-api-rest' element={<ApiRest />} />
+          <Route path='/Servicios/Apis/java-api-soap' element={<JavaAPISoap />} />
+          <Route path='/Servicios/Apis/integracion-apis' element={<Externas />} />
+          <Route path='/Servicios/Apis/microservicios' element={<Microservicios />} />
+          {/* Servicios Adicionales */}
           <Route path='/Servicios/Adicionales' element={<ServiciosAdicionales />} />
+          <Route path='/Servicios/Adicionales/mantenimiento' element={<Mantenimiento />} />
+          
           <Route path='/Contacto' element={<Contacto />} />
           <Route path='/SobreNosotros' element={<SobreNosotros />}/>
           <Route />

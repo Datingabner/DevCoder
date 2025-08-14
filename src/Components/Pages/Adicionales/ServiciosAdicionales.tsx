@@ -259,7 +259,7 @@ const AdditionalServices = () => {
               timeline={service.timeline}
               price={service.price}
               popular={service.popular}
-              onLearnMore={() => window.location.href = `/Servicios/ServiciosAdicionales#${service.id}`}
+              onLearnMore={() => window.location.href = `/Servicios/Adicionales/${service.id}`}
             />
           ))}
         </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import logoDevCoder from "/DevCoder_Grande.png";
+import { IoIosArrowForward } from 'react-icons/io';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,26 +57,26 @@ const Navbar = () => {
                 </NavLink>
 
                 {showServicesDropdown && (
-                  <div className="absolute top-full left-0 w-64 bg-cyan-900 rounded-md shadow-lg border border-gray-200">
+                  <div className="absolute top-full left-0 w-64 bg-slate-800 rounded-md shadow-lg border border-gray-200">
                     <div className="py-2">
-                      <NavLink to={"/Servicios/Web"} className="px-4 py-2 text-xs font-semibold text-cyan-200 uppercase tracking-wide">
-                        Desarrollo Web
+                      <NavLink to={"/Servicios/Web"} className="px-4 py-2 flex items-center text-xs font-semibold text-cyan-200 uppercase tracking-wide">
+                        Desarrollo Web <span className=""><IoIosArrowForward /></span>
                       </NavLink>
-                      <div className="px-4 py-1 text-sm text-amber-100 hover:bg-gray-500">Páginas Web Informativas</div>
-                      <div className="px-4 py-1 text-sm text-amber-100 hover:bg-gray-500">E-Commerce</div>
-                      <div className="px-4 py-1 text-sm text-amber-100 hover:bg-gray-500">Aplicaciones Personalizadas</div>
+                      <NavLink to={"/Servicios/Web/sitios-informativos"} className="px-4 flex py-1 text-sm text-amber-100 hover:bg-gray-500">Páginas Web Informativas</NavLink>
+                      <NavLink to={"/Servicios/Web/ecommerce"} className="px-4 flex py-1 text-sm text-amber-100 hover:bg-gray-500">E-Commerce</NavLink>
+                      <NavLink to={"/Servicios/Web/apps-personalizadas"} className="px-4 flex py-1 text-sm text-amber-100 hover:bg-gray-500">Aplicaciones Personalizadas</NavLink>
 
-                      <NavLink to={"/Servicios/Apis"} className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2">
-                        Desarrollo de Servicios
+                      <NavLink to={"/Servicios/Apis"} className="px-4 py-2 flex items-center text-xs font-semibold text-cyan-200 uppercase tracking-wide">
+                        Desarrollo De Servicios<span className=""><IoIosArrowForward /></span>
                       </NavLink>
-                      <div className="px-4 py-1 text-sm text-amber-100 hover:bg-gray-500">Java API Rest</div>
-                      <div className="px-4 py-1 text-sm text-amber-100 hover:bg-gray-500">Microservicios</div>
+                      <NavLink to={"/Servicios/Apis/java-api-rest"} className="px-4 flex py-1 text-sm text-amber-100 hover:bg-gray-500">Java API Rest</NavLink>
+                      <NavLink to={"/Servicios/Apis/microservicios"} className="px-4 flex py-1 text-sm text-amber-100 hover:bg-gray-500">Microservicios</NavLink>
 
-                      <NavLink to={"/Servicios/Adicionales"} className="px-4 py-2 text-xs font-semibold text-cyan-200 uppercase tracking-wide mt-2">
-                        Servicios Adicionales
+                      <NavLink to={"/Servicios/Adicionales"} className="px-4 py-2 flex items-center text-xs font-semibold text-cyan-200 uppercase tracking-wide">
+                        Servicios Adicionales<span className=""><IoIosArrowForward /></span>
                       </NavLink>
-                      <div className="px-4 py-1 text-sm text-amber-100 hover:bg-gray-500">Consultoría Tecnológica</div>
-                      <div className="px-4 py-1 text-sm text-amber-100 hover:bg-gray-500">Mantenimiento y Soporte</div>
+                      <NavLink to={"Servicios/Adicionales/"} className="px-4 flex py-1 text-sm text-amber-100 hover:bg-gray-500">Consultoría Tecnológica</NavLink>
+                      <NavLink to={"Servicios/Adicionales/mantenimiento"} className="px-4 flex py-1 text-sm text-amber-100 hover:bg-gray-500">Mantenimiento y Soporte</NavLink>
                     </div>
                   </div>
                 )}
@@ -108,41 +109,41 @@ const Navbar = () => {
         </div>
 
       </div>
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-cyan-950/95 backdrop-blur-xs border-t border-gray-200">
-              <NavLink
-                to={"/"}
-                onClick={() => setIsOpen(false)}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
-              >
-                Inicio
-              </NavLink>
-              <NavLink
-                to={"/Servicios"}
-                onClick={() => setIsOpen(false)}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
-              >
-                Servicios
-              </NavLink>
-              <NavLink
-                to={"/SobreNosotros"}
-                onClick={() => setIsOpen(false)}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
-              >
-                Sobre Nosotros
-              </NavLink>
-              <NavLink
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-cyan-950/95 backdrop-blur-xs border-t border-gray-200">
+            <NavLink
+              to={"/"}
+              onClick={() => setIsOpen(false)}
+              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
+            >
+              Inicio
+            </NavLink>
+            <NavLink
+              to={"/Servicios"}
+              onClick={() => setIsOpen(false)}
+              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
+            >
+              Servicios
+            </NavLink>
+            <NavLink
+              to={"/SobreNosotros"}
+              onClick={() => setIsOpen(false)}
+              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
+            >
+              Sobre Nosotros
+            </NavLink>
+            <NavLink
               to={"/Contacto"}
-                onClick={() => setIsOpen(false)}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
-              >
-                Contacto
-              </NavLink>
-            </div>
+              onClick={() => setIsOpen(false)}
+              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
+            >
+              Contacto
+            </NavLink>
           </div>
-        )}
+        </div>
+      )}
     </nav>
   );
 };

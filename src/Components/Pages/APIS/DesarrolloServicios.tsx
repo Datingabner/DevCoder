@@ -218,7 +218,7 @@ const ServiceDevelopment = () => {
               timeline={service.timeline}
               price={service.price}
               complexity={service.complexity}
-              onLearnMore={() => window.location.href = `/Servicios/DesarrolloAPIs#${service.id}`}
+              onLearnMore={() => window.location.href = `/Servicios/Apis/${service.id}`}
             />
           ))}
         </div>

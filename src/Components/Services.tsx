@@ -1,4 +1,5 @@
 import { Globe, Server, Wrench, Code, Database, Smartphone, ShoppingCart, Settings, Zap, Users, TrendingUp, BookOpen } from 'lucide-react';
+import { LuCircleArrowRight } from 'react-icons/lu';
 
 const Services = () => {
   const webServices = [
@@ -93,7 +94,14 @@ const Services = () => {
         {/* Desarrollo Web */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Desarrollo Web</h3>
+            <div className='flex text-center justify-center mb-2 '>
+              <div className='flex bg-gradient-to-r from-blue-300 via-indigo-300 to-cyan-300 text-white p-4 rounded-lg'>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Desarrollo Web</h3>
+              <div className='h-10 w-15 rounded-lg mx-1 '>
+                <LuCircleArrowRight className='text-blue-700 ml-4 h-10 w-auto' />
+              </div>
+              </div>
+            </div>
             <p className="text-lg text-gray-600">Creamos experiencias web modernas y funcionales</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
