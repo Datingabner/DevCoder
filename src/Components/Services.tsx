@@ -1,5 +1,6 @@
 import { Globe, Server, Wrench, Code, Database, Smartphone, ShoppingCart, Settings, Zap, Users, TrendingUp, BookOpen } from 'lucide-react';
 import { LuCircleArrowRight } from 'react-icons/lu';
+import { NavLink } from 'react-router-dom';
 
 const Services = () => {
   const webServices = [
@@ -95,11 +96,12 @@ const Services = () => {
         <div className="mb-16">
           <div className="text-center mb-12">
             <div className='flex text-center justify-center mb-2 '>
-              <div className='flex bg-gradient-to-r from-blue-300 via-indigo-300 to-cyan-300 text-white p-4 rounded-lg'>
+              <div className='flex border-2 border-white border-b-gray-300 hover:border-2 hover:border-t-cyan-300 hover:border-r-blue-400 hover:border-l-blue-400 hover:border-b-blue-500 hover:bg-gradient-to-r hover:from-cyan-200/50 hover:to-blue-300/80 hover:backdrop-blur-sm shadow-lg 
+               hover:shadow-blue-500 p-1 pl-3 pr-3 transition-all duration-100 rounded-lg'>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Desarrollo Web</h3>
-              <div className='h-10 w-15 rounded-lg mx-1 '>
-                <LuCircleArrowRight className='text-blue-700 ml-4 h-10 w-auto' />
-              </div>
+              <NavLink to={"/Servicios/Web"} className='h-10 w-15 rounded-lg mx-1 '>
+                <LuCircleArrowRight className='text-blue-700 ml-4 h-10 w-auto hover:scale-110' />
+              </NavLink>
               </div>
             </div>
             <p className="text-lg text-gray-600">Creamos experiencias web modernas y funcionales</p>
@@ -114,7 +116,15 @@ const Services = () => {
         {/* Desarrollo de Servicios */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Desarrollo de Servicios</h3>
+            <div className='flex text-center justify-center mb-2 '>
+              <div className='flex border-2 border-transparent border-b-gray-300 hover:border-2 hover:border-t-cyan-300 hover:border-r-blue-400 hover:border-l-blue-400 hover:border-b-blue-500 hover:bg-gradient-to-r hover:from-cyan-200/50 hover:to-blue-300/80 hover:backdrop-blur-sm shadow-lg 
+               hover:shadow-blue-500 p-1 pl-3 pr-3 transition-all duration-100 rounded-lg'>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Desarrollo de Servicios</h3>
+              <NavLink to={"/Servicios/Apis"} className='h-10 w-15 rounded-lg mx-1 '>
+                <LuCircleArrowRight className='text-blue-700 ml-4 h-10 w-auto hover:scale-110' />
+              </NavLink>
+              </div>
+            </div>
             <p className="text-lg text-gray-600">APIs y microservicios robustos para tu infraestructura</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -127,7 +137,15 @@ const Services = () => {
         {/* Servicios Adicionales */}
         <div>
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Servicios Adicionales</h3>
+            <div className='flex text-center justify-center mb-2 '>
+              <div className='flex border-2 border-white border-b-gray-300 hover:border-2 hover:border-t-cyan-300 hover:border-r-blue-400 hover:border-l-blue-400 hover:border-b-blue-500 hover:bg-gradient-to-r hover:from-cyan-200/50 hover:to-blue-300/80 hover:backdrop-blur-sm shadow-lg 
+               hover:shadow-blue-500 p-1 pl-3 pr-3 transition-all duration-100 rounded-lg'>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Servicios Adicionales</h3>
+              <NavLink to={"/Servicios/Adicionales"} className='h-10 w-15 rounded-lg mx-1 '>
+                <LuCircleArrowRight className='text-blue-700 ml-4 h-10 w-auto hover:scale-110' />
+              </NavLink>
+              </div>
+            </div>
             <p className="text-lg text-gray-600">Soporte integral para el éxito de tu proyecto</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -112,32 +112,32 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-cyan-950/95 backdrop-blur-xs border-t border-gray-200">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 border-t border-gray-200">
             <NavLink
               to={"/"}
               onClick={() => setIsOpen(false)}
-              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
+              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-100 hover:bg-gray-500"
             >
               Inicio
             </NavLink>
             <NavLink
               to={"/Servicios"}
               onClick={() => setIsOpen(false)}
-              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
+              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-100 hover:bg-gray-500"
             >
               Servicios
             </NavLink>
             <NavLink
               to={"/SobreNosotros"}
               onClick={() => setIsOpen(false)}
-              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
+              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-100 hover:bg-gray-500"
             >
               Sobre Nosotros
             </NavLink>
             <NavLink
               to={"/Contacto"}
               onClick={() => setIsOpen(false)}
-              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-200 hover:text-blue-600 hover:bg-gray-50"
+              className="block w-full text-left px-3 py-2 text-base font-medium text-cyan-100 hover:bg-gray-500"
             >
               Contacto
             </NavLink>

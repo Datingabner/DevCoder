@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { FaJava, FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 import { BiLogoPostgresql, BiLogoSpringBoot } from 'react-icons/bi';
-import RainOfStars from './Backgrounds/RainOfStars';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -64,7 +63,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="inicio" className="pt-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <section id="inicio" className="pt-16 bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Hero Principal */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
@@ -79,7 +78,7 @@ const Hero = () => {
           </p>
 
           {/* Propuesta de Valor */}
-          <div className="bg-cyan-200/50 backdrop-blur-sm rounded-2xl p-8 mb-12 shadow-lg animate-fade-in-delay-2">
+          <div className="bg-gradient-to-r from-cyan-300/70 via-indigo-200/80 to-blue-300/70 backdrop-blur-sm rounded-2xl p-8 mb-12 shadow-lg animate-fade-in-delay-2">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">¿Por qué elegir DevCoder?</h2>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto">
               Combinamos experiencia técnica con un enfoque centrado en resultados. Desarrollamos soluciones escalables,
@@ -154,16 +153,11 @@ const Hero = () => {
               <div className=" w-min text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
                 <tech.icon className={`h-13 w-auto ${tech.iconcolor} `} />
               </div>
-              <p className="text-sm font-medium text-gray-800">{tech.name}</p>
+              <p className="text-lg font-bold text-gray-800">{tech.name}</p>
             </div>
           ))}
         </div>
       </div>
-      <RainOfStars>
-        <div className='h-100 bg-transparent backdrop-blur-xs flex items-center justify-center'>
-          
-        </div>
-        </RainOfStars>
     </section>
   );
 };
